@@ -15,7 +15,8 @@ export default function Header() {
         "left-0",
         "right-0",
         "top-0",
-        "shadow-md"
+        "shadow-md",
+        "z-20"
       )}
     >
       <div className={classnames("container")}>
@@ -41,7 +42,7 @@ export default function Header() {
               onClick={() => router.push("/")}
             />
 
-            <HeaderRouters />
+            <HeaderRouters hideContact />
           </div>
           <button
             className={classnames(

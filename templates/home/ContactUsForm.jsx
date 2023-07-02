@@ -17,7 +17,13 @@ export default function ContactUsForm() {
       <div>
         <form onSubmit={onSubmit}>
           <div
-            className={classnames("grid", "grid-cols-2", "gap-x-6", "gap-y-4")}
+            className={classnames(
+              "grid",
+              "grid-cols-2",
+              "gap-x-6",
+              "gap-y-4",
+              "text-white"
+            )}
           >
             {inputs.map((item) => (
               <div

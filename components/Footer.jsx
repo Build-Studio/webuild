@@ -3,15 +3,8 @@ import GradientBlock from "./GradientBlock";
 import Image from "next/image";
 import ContactUsForm from "@templates/home/ContactUsForm";
 import HeaderRouters from "./HeaderRoutes";
+import { webInfos } from "@constants";
 
-const infos = {
-  intro: ["LETS BUILD THE", "METAVERSE TOGETHER"],
-  sgAddress: "96 Robinson Road, #11-04, SIF Building, Singapore, 068899",
-  vnAddress:
-    "4th Floor, 343 Hoang Sa, Tan Dinh Ward, District 1, Ho Chi Minh City, Vietnam 700000",
-  email: "team@webuild.gg",
-  phone: "+84 896 656941",
-};
 
 const socials = [
   {
@@ -39,17 +32,17 @@ export default function Header() {
         <div className={classnames("container", "flex", "justify-between")}>
           <div>
             <h3 className={classnames("font-bold", "mb-4")}>
-              <p className={classnames("leading-none", "-mb-3")}>
-                {infos.intro[0]}
+              <p className={classnames("leading-none", "-mb-2.5")}>
+                {webInfos.intro[0]}
               </p>
-              <GradientBlock>{infos.intro[1]}</GradientBlock>
+              <GradientBlock>{webInfos.intro[1]}</GradientBlock>
             </h3>
             <div className={classnames("mb-8", "w-[300px]")}>
               <h5 className={classnames("text-lg", "font-bold", "mb-0.5")}>
-                {infos.sgAddress}
+                {webInfos.sgAddress}
               </h5>
               <a
-                href={`mailto:${infos.email}`}
+                href={`mailto:${webInfos.email}`}
                 className={classnames(
                   "underline",
                   "hover:text-primary",
@@ -58,15 +51,15 @@ export default function Header() {
                   "font-medium"
                 )}
               >
-                {infos.email}
+                {webInfos.email}
               </a>
             </div>
-            <div className={classnames("mb-4", "w-[300px]")}>
+            <div className={classnames("mb-8", "w-[300px]")}>
               <h5 className={classnames("text-lg", "font-bold", "mb-0.5")}>
-                {infos.vnAddress}
+                {webInfos.vnAddress}
               </h5>
               <a
-                href={`mailto:${infos.email}`}
+                href={`mailto:${webInfos.email}`}
                 className={classnames(
                   "underline",
                   "hover:text-primary",
@@ -77,10 +70,10 @@ export default function Header() {
                   "mb-1"
                 )}
               >
-                {infos.email}
+                {webInfos.email}
               </a>
               <a
-                href={`tel:${infos.phone}`}
+                href={`tel:${webInfos.phone}`}
                 className={classnames(
                   "hover:text-primary",
                   "transition",
@@ -89,7 +82,7 @@ export default function Header() {
                   "block"
                 )}
               >
-                {infos.phone}
+                {webInfos.phone}
               </a>
             </div>
             <div className={classnames("flex", "gap-3")}>

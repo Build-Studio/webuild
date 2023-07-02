@@ -23,6 +23,12 @@ module.exports = {
         secondary: {
           DEFAULT: '#9B52E8'
         },
+        blue: {
+          DEFAULT: '#4A61DB',
+        },
+        fuchsia: {
+          DEFAULT: '#BA54BC',
+        },
         gray: {
           900: "#101828",
           800: "#1D2939",

@@ -10,12 +10,16 @@ const routes = [
   { label: "Contact us ", path: "/contact-us" },
 ];
 
-export default function HeaderRouters({ textClasses }) {
+export default function HeaderRouters({ textClasses, hideContact }) {
   const router = useRouter();
+
+  const availableRoutes = routes.filter((i) =>
+    hideContact ? i.path !== "/contact-us" : i
+  );
 
   return (
     <div className={classnames("flex", "items-center")}>
-      {routes.map((item) => {
+      {availableRoutes.map((item) => {
         const active = item.path === router.pathname;
         return (
           <Link
