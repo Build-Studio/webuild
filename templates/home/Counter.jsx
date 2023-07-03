@@ -31,8 +31,7 @@ export default function HomeCounter() {
             key={item.label}
             className={classnames(
               "rounded-xl",
-              "px-6",
-              "py-3",
+              "p-6",
               "text-white",
               "flex",
               "flex-col",
@@ -43,7 +42,7 @@ export default function HomeCounter() {
             <Image
               alt="icon"
               src={item.icon}
-              className={classnames("w-20", "w-auto", "mb-1")}
+              className={classnames("w-[100px]", "w-auto", "mb-1")}
             />
             <h3
               className={classnames(

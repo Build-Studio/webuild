@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 import { AiFillCaretRight } from "react-icons/ai";
 import classnames from "tailwindcss-classnames";
 
-export default function HomeBanner() {
+export default function HomeBanner(props) {
+  const { data, gradientTitleClasses, subtitleClasses } = props;
   const router = useRouter();
   const goToContact = () => {
     router.push("/contact-us");
@@ -29,22 +30,26 @@ export default function HomeBanner() {
             "flex",
             "items-center",
             "justify-center",
-            "mr-[130px]"
+            gradientTitleClasses
           )}
         >
           <div
             className={classnames("px-3", "border-r-[2px]", "border-r-white")}
           >
             <h1 className={classnames("text-right", "text-7xl", "font-bold")}>
-              <GradientBlock>EMPOWERING</GradientBlock>
+              <GradientBlock>{data.gradientTitles[0]}</GradientBlock>
             </h1>
             <h1 className={classnames("text-right", "text-7xl", "font-bold")}>
-              <GradientBlock>BRANDS</GradientBlock>
+              <GradientBlock>{data.gradientTitles[1]}</GradientBlock>
             </h1>
           </div>
           <div className={classnames("px-3")}>
-            <h1 className={classnames("text-7xl", "font-bold")}>ENGAGING</h1>
-            <h1 className={classnames("text-7xl", "font-bold")}>GAMERS</h1>
+            <h1 className={classnames("text-7xl", "font-bold")}>
+              {data.gradientTitles[2]}
+            </h1>
+            <h1 className={classnames("text-7xl", "font-bold")}>
+              {data.gradientTitles[3]}
+            </h1>
           </div>
         </div>
         <h4
@@ -53,12 +58,11 @@ export default function HomeBanner() {
             "text-center",
             "mt-10",
             "max-w-[600px]",
-            "mb-6"
+            "mb-6",
+            subtitleClasses
           )}
-        >
-          We help brands access the hottest properties in the hottest marketing
-          vertical
-        </h4>
+          dangerouslySetInnerHTML={{ __html: data.subtitle }}
+        />
         <button
           className={classnames(
             "flex",
@@ -85,7 +89,7 @@ export default function HomeBanner() {
           "flex",
           "items-center",
           "container",
-          "pb-10",
+          "mb-10",
           "relative"
         )}
       >
@@ -97,24 +101,21 @@ export default function HomeBanner() {
             "p-8",
             "absolute",
             "top-[50%]",
-            "left-0",
-            "translate-y-[-55%]",
+            "left-4",
+            "translate-y-[-50%]",
             "w-[420px]",
             "z-10"
           )}
         >
           <h3 className={classnames("font-bold", "leading-none", "mb-3")}>
-            WE BUILD GAMES FOR BRANDS
+            {data.leftBox.title}
           </h3>
-          <p className={classnames("mb-3")}>
-            Build is a globaL technology and creative studio that builds AAA
-            quality, branded metaverse games, experiences and events.
-          </p>
-          <p className={classnames("mb-3")}>
-            Our team of more than 40 developers, designers, marketing experts
-            develop, launch and promote gaming and metaverse solutions for
-            brands and agencies across the world.
-          </p>
+          {data.leftBox.desc.map((desc, index) => (
+            <p className={classnames("mb-3")} key={index}>
+              {desc}
+            </p>
+          ))}
+          <p className={classnames("mb-3")}></p>
           <button
             className={classnames(
               "flex",
@@ -145,16 +146,8 @@ export default function HomeBanner() {
           )}
           controls
           preload={"auto"}
-          muted
-          autoPlay
-          loop
         >
-          <source
-            src={
-              "https://d1ly3rk1lsmf13.cloudfront.net/Untitled_video_Made_with_Clipchamp_641423b850.mp4"
-            }
-            type="video/mp4"
-          />
+          <source src={data.videoUrl} type="video/mp4" />
         </video>
       </div>
     </div>

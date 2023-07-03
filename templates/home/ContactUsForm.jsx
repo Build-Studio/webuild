@@ -1,4 +1,5 @@
 import classnames from "tailwindcss-classnames";
+import { useState } from "react";
 
 const inputs = [
   { value: "name", label: "FULL NAME" },
@@ -9,7 +10,22 @@ const inputs = [
 ];
 
 export default function ContactUsForm() {
-  const onSubmit = () => {};
+  const [state, setState] = useState({
+    name: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const onSubmit = async (e) => {
+    e?.preventDefault?.();
+
+    await fetch("/api/email", {
+      method: "POST",
+      body: JSON.stringify(state),
+    });
+  };
 
   return (
     <div>
@@ -29,6 +45,10 @@ export default function ContactUsForm() {
               <div
                 key={item.value}
                 className={item.type === "textarea" ? "col-span-2" : ""}
+                value={state[item.value]}
+                onChange={(e) =>
+                  setState({ ...state, [item.value]: e?.target?.value })
+                }
               >
                 {item.type === "textarea" ? (
                   <textarea
@@ -47,6 +67,10 @@ export default function ContactUsForm() {
                       "min-h-[150px]",
                       "font-bold"
                     )}
+                    value={state[item.value]}
+                    onChange={(e) =>
+                      setState({ ...state, [item.value]: e?.target?.value })
+                    }
                   />
                 ) : (
                   <input

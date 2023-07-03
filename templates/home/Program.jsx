@@ -38,9 +38,6 @@ export default function HomeProgram() {
             className={classnames("w-[760px]", "max-w-none", "aspect-[16/9]")}
             controls
             preload={"auto"}
-            muted
-            autoPlay
-            loop
           >
             <source
               src={

@@ -5,28 +5,28 @@ import classnames from "tailwindcss-classnames";
 
 const items = [
   {
-    label: "ROBLOX GAMES AND EVENTS",
+    label: "AAA QUALITY",
     desc: "We work with brands and agencies to ideate, design, build and promote destination games and events as part of integrated marketing campaigns.",
     img: require("@assets/images/audience-img-4.webp"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
   },
   {
-    label: "MINECRAFT CUSTOM SOLUTIONS",
+    label: "UGC Metaverse",
     desc: "Be build pop-up mini experiences inside popular games",
     img: require("@assets/images/audience-img-4.webp"),
     textColor: "text-primary",
     bgColor: "bg-primary",
   },
   {
-    label: "STRATEGIC BRAND SOLUTIONS",
+    label: "In-App Games",
     desc: "Any platforms, any intergaration, whatever, we can do it...(and help yuo find the right solution for your need)",
     img: require("@assets/images/audience-img-4.webp"),
     textColor: "text-blue",
     bgColor: "bg-blue",
   },
   {
-    label: "FORNITE CUSTOM CREATIVE",
+    label: "Mobile Games",
     desc: "Custom maps, characters, player abilities, and branded events promoted to millions of players ",
     img: require("@assets/images/audience-img-4.webp"),
     textColor: "text-fuchsia",
@@ -34,16 +34,25 @@ const items = [
   },
 ];
 
-export default function HomeAudience() {
+export default function BuildHelpingBrands() {
   return (
-    <div className={classnames("container", "pb-24")}>
+    <div className={classnames("container", "pt-24")}>
       <div className={classnames("mb-12")}>
-        <h3 className={classnames("text-center", "font-bold", "mb-3")}>
-          INNOVATIVE AND AUTHENTIC CONNECTIONS WITH GAMERS
+        <h3
+          className={classnames(
+            "text-center",
+            "font-bold",
+            "mb-3",
+            "max-w-[450px]",
+            "mx-auto",
+            "leading-none"
+          )}
+        >
+          HELPING BRANDS ACCESS THE HOTTEST PROPERTIES
         </h3>
         <p className={classnames("text-center", "font-medium")}>
-          We work with brands and agencies to create amazing experiences in
-          games like Roblox, Fortnite and Minecraft
+          We will help bring your brand or idea into the metaverse, with the
+          right concept and the right tech for your needs and budget
         </p>
       </div>
       <div className={classnames("grid", "grid-cols-2", "gap-8")}>

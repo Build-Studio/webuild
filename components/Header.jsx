@@ -60,6 +60,7 @@ export default function Header() {
               "hover:text-white",
               "hover:bg-primary"
             )}
+            onClick={() => router.push('/contact-us')}
           >
             CONTACT US
             <AiFillCaretRight className={classnames("ml-1")} />
