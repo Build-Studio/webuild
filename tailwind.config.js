@@ -29,6 +29,13 @@ module.exports = {
         fuchsia: {
           DEFAULT: '#BA54BC',
         },
+        pink: {
+          DEFAULT: '#D65592',
+        },
+        turquoise: {
+          DEFAULT: '#7FD9FF',
+          200: "#a7e2fb",
+        },
         gray: {
           900: "#101828",
           800: "#1D2939",
