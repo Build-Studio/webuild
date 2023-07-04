@@ -6,7 +6,7 @@ export const EmailTemplate = (props) => {
       <h3>COMPANY NAME: {companyName}</h3>
       <h3>EMAIL ADDRESS: {email}</h3>
       <h3>PHONE NUMBER: {phone}</h3>
-      <h3>YOUR MESSAGE: {message}</h3>
+      <h5>YOUR MESSAGE: {message}</h5>
     </div>
   );
 };

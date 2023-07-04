@@ -1,13 +1,32 @@
 import classnames from "tailwindcss-classnames";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const inputs = [
   { value: "name", label: "FULL NAME" },
   { value: "companyName", label: "COMPANY NAME" },
-  { value: "email", label: "EMAIL ADDRESS" },
+  { value: "email", label: "EMAIL ADDRESS", type: "email" },
   { value: "phone", label: "PHONE NUMBER" },
   { value: "message", label: "YOUR MESSAGE...", type: "textarea" },
 ];
+
+const initState = {
+  name: "",
+  companyName: "",
+  email: "",
+  phone: "",
+  message: "",
+};
+
+const toastParams = {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: true,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  theme: "light",
+};
 
 export default function ContactUsForm() {
   const [state, setState] = useState({
@@ -18,13 +37,28 @@ export default function ContactUsForm() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = async (e) => {
     e?.preventDefault?.();
+    setLoading(true);
 
-    await fetch("/api/email", {
-      method: "POST",
-      body: JSON.stringify(state),
-    });
+    try {
+      await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify(state),
+      });
+
+      setState(initState);
+
+      toast.success(
+        "Thank you for submitting your contact! Please look out for our confirmation email with instructions.",
+        toastParams
+      );
+      setLoading(false);
+    } catch (err) {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,10 +79,6 @@ export default function ContactUsForm() {
               <div
                 key={item.value}
                 className={item.type === "textarea" ? "col-span-2" : ""}
-                value={state[item.value]}
-                onChange={(e) =>
-                  setState({ ...state, [item.value]: e?.target?.value })
-                }
               >
                 {item.type === "textarea" ? (
                   <textarea
@@ -88,6 +118,11 @@ export default function ContactUsForm() {
                       "focus:border-primary",
                       "font-bold"
                     )}
+                    value={state[item.value]}
+                    onChange={(e) =>
+                      setState({ ...state, [item.value]: e?.target?.value })
+                    }
+                    type={item.type || "input"}
                   />
                 )}
               </div>
@@ -95,16 +130,17 @@ export default function ContactUsForm() {
           </div>
           <div className={classnames("flex", "justify-end")}>
             <button
+              disabled={loading}
               type="submit"
               className={classnames(
                 "px-4",
                 "py-2",
-                "bg-primary",
+                loading ? "bg-gray-300" : "bg-primary",
                 "text-white",
                 "font-bold",
                 "rounded-md",
                 "mt-3",
-                "hover:bg-secondary",
+                !loading && "hover:bg-secondary",
                 "transition",
                 "duration-300"
               )}

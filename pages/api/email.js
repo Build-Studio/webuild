@@ -2,16 +2,16 @@ import { EmailTemplate } from "@components/EmailTemplate";
 import { webInfos } from "@constants";
 import { Resend } from "resend";
 
-const resend = new Resend("re_BwN9kPzC_MSTYcKEriqUcKrYhwfYbVzCG");
+const resend = new Resend("re_c2aaFokR_C1sX2Vvj7QV8iWLJfoRTm86R");
 
 export default async (req, res) => {
   try {
     const data = await resend.emails.send({
       from: "noreply@webuild.gg",
-      to: ["kemmie.xd@gmail.com"],
       // to: webInfos.contactEmails,
+      to: ['kemmie.xd@gmail.com'],
       subject: "Contact from We Build",
-      react: EmailTemplate(req),
+      react: EmailTemplate(JSON.parse(req?.body)),
     });
 
     res.status(200).json(data);
