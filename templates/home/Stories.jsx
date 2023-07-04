@@ -13,7 +13,7 @@ const items = [
     icon: require("@assets/images/story-icon-1.svg"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
-    videoUrl: "https://www.youtube.com/watch?v=qF28GjJ0qwA",
+    videoUrl: "https://www.youtube.com/watch?v=j2fx7-0tRI4",
   },
   {
     label: "AWARD WINNING",
@@ -22,7 +22,7 @@ const items = [
     icon: require("@assets/images/story-icon-2.svg"),
     textColor: "text-primary",
     bgColor: "bg-primary",
-    videoUrl: "https://www.youtube.com/watch?v=qF28GjJ0qwA",
+    videoUrl: "https://www.youtube.com/watch?v=_jQt36lq0ew",
   },
   {
     label: "25M+ KICKERS ITEMS WORN",
@@ -31,7 +31,8 @@ const items = [
     icon: require("@assets/images/story-icon-3.svg"),
     textColor: "text-blue",
     bgColor: "bg-blue",
-    videoUrl: "https://www.youtube.com/watch?v=qF28GjJ0qwA",
+    videoUrl:
+      "https://www.youtube.com/watch?v=Dkvw6VtC0wQ&pp=ygUHbWV0YWRvcw%3D%3D",
   },
   {
     label: "MTV MUSIC  VIDEO AWARD NOMINATION",
@@ -40,7 +41,8 @@ const items = [
     icon: require("@assets/images/story-icon-4.svg"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",
-    videoUrl: "https://www.youtube.com/watch?v=qF28GjJ0qwA",
+    videoUrl:
+      "https://www.youtube.com/watch?v=oLCvG8zsxHU&pp=ygUQZm9ydG5pdGUgc25pcHBldA%3D%3D",
   },
 ];
 

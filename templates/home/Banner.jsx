@@ -14,19 +14,30 @@ export default function HomeBanner(props) {
     <div
       className={classnames(
         "pt-[8vh]",
-        "bg-[url('/home-banner-bg.webp')]",
+        "bg-[url('/home-banner-bg.png')]",
         "bg-cover",
         "bg-no-repeat",
-        "max-h-[calc(100vh_-_64px)]",
+        "h-[calc(100vh_-_64px)]",
         "min-h-[1050px]",
-        "h-full",
         "text-white",
         "flex",
         "flex-col",
-        "justify-between"
+        "justify-between",
+        "relative"
       )}
     >
-      <div className={classnames("flex", "flex-col", "items-center")}>
+      <div
+        className={classnames(
+          "bg-[rgba(0,0,0,.5)]",
+          "w-full",
+          "h-full",
+          "absolute",
+          "top-0",
+          "left-0",
+          "z-0"
+        )}
+      />
+      <div className={classnames("flex", "flex-col", "items-center", "z-10")}>
         <div
           className={classnames(
             "flex",
@@ -142,7 +153,6 @@ export default function HomeBanner(props) {
           className={classnames(
             "w-[1000px]",
             "max-w-none",
-            "aspect-[16/9]",
             "rounded-xl",
             "ml-auto"
           )}

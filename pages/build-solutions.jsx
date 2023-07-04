@@ -21,8 +21,7 @@ export default function BuildSolution() {
               "We leverage those learnings to help brands and agencies design and build innovative, custom gaming and metaverse solutions that drive remarkable results.",
             ],
           },
-          videoUrl:
-            "https://d1ly3rk1lsmf13.cloudfront.net/Untitled_video_Made_with_Clipchamp_641423b850.mp4",
+          videoUrl: "home-banner-video.mp4",
         }}
         gradientTitleClasses={classnames("ml-[60px]")}
         subtitleClasses={classnames("max-w-[850px]")}

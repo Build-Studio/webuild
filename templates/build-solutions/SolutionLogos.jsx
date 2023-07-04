@@ -8,6 +8,12 @@ const items = [
   require("@assets/images/solution-logo-3.png"),
   require("@assets/images/solution-logo-4.png"),
   require("@assets/images/solution-logo-5.png"),
+  require("@assets/images/solution-logo-6.svg"),
+  require("@assets/images/solution-logo-7.png"),
+  require("@assets/images/solution-logo-8.png"),
+  require("@assets/images/solution-logo-9.png"),
+  require("@assets/images/solution-logo-10.svg"),
+  require("@assets/images/solution-logo-11.png"),
 ];
 
 export default function BuildSolutionLogos() {
@@ -19,7 +25,7 @@ export default function BuildSolutionLogos() {
             src={item}
             alt="logo"
             key={index}
-            className={classnames("w-auto", "h-20", "mx-6", "opacity-20")}
+            className={classnames("w-auto", "h-20", "mx-6", "opacity-20", 'grayscale-100')}
           />
         ))}
       </Marquee>

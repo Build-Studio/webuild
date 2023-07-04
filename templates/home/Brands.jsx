@@ -19,7 +19,7 @@ export default function HomeBrands() {
             src={item}
             alt="logo"
             key={index}
-            className={classnames("w-auto", "h-20", "mx-6", "opacity-20")}
+            className={classnames("w-auto", "h-20", "mx-6", "opacity-20", 'grayscale-100')}
           />
         ))}
       </Marquee>

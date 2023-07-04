@@ -1,59 +1,52 @@
 import NewsItem from "@components/NewsItem";
-import { useRouter } from "next/router";
-import { AiFillCaretRight } from "react-icons/ai";
 import classnames from "tailwindcss-classnames";
 
 const items = [
   {
     label: "RESEARCH",
     desc: "MATTEL",
-    img: require("@assets/images/story-img-1.webp"),
+    img: require("@assets/images/case-study-img-1.jpeg"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
   },
   {
     label: "STRATEGY ",
     desc: "ROBLOX",
-    img: require("@assets/images/story-img-2.jpeg"),
+    img: require("@assets/images/case-study-img-2.jpeg"),
     textColor: "text-primary",
     bgColor: "bg-primary",
   },
   {
     label: "DESIGN AND BUILD",
     desc: "BEYBLADE",
-    img: require("@assets/images/story-img-3.webp"),
+    img: require("@assets/images/case-study-img-3.jpeg"),
     textColor: "text-blue",
     bgColor: "bg-blue",
   },
   {
     label: "GAME PROMOTION  ",
     desc: "BABY EINSTEIN",
-    img: require("@assets/images/story-img-4.webp"),
+    img: require("@assets/images/case-study-img-4.jpeg"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",
   },
   {
     label: "INTEGRATED MARKETING",
     desc: "LEGO VENTURES",
-    img: require("@assets/images/story-img-1.webp"),
+    img: require("@assets/images/case-study-img-5.jpeg"),
     textColor: "text-pink",
     bgColor: "bg-pink",
   },
   {
     label: "ANALYTICS ",
     desc: "CARTOON NETWORK",
-    img: require("@assets/images/story-img-2.jpeg"),
+    img: require("@assets/images/case-study-img-6.jpeg"),
     textColor: "text-turquoise",
     bgColor: "bg-turquoise",
   },
 ];
 
 export default function BuildCaseStudies() {
-  const router = useRouter();
-
-  const goToBuildSolutions = () => {
-    router.push("/build-solutions");
-  };
   return (
     <div className={classnames("container", "pb-24")}>
       <h3 className={classnames("text-center", "font-bold", "mb-4")}>

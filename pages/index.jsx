@@ -24,8 +24,7 @@ export default function Home() {
               "Our team of more than 40 developers, designers, marketing experts develop, launch and promote gaming and metaverse solutions for brands and agencies across the world.",
             ],
           },
-          videoUrl:
-            "https://d1ly3rk1lsmf13.cloudfront.net/Untitled_video_Made_with_Clipchamp_641423b850.mp4",
+          videoUrl: "home-banner-video.mp4",
         }}
         gradientTitleClasses={classnames("mr-[130px]")}
       />

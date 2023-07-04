@@ -39,12 +39,7 @@ export default function HomeProgram() {
             controls
             preload={"auto"}
           >
-            <source
-              src={
-                "https://d1ly3rk1lsmf13.cloudfront.net/Untitled_video_Made_with_Clipchamp_641423b850.mp4"
-              }
-              type="video/mp4"
-            />
+            <source src={"home-program-video.mp4"} type="video/mp4" />
           </video>
         </div>
         <div className={classnames("bg-fuchsia", "text-white", "p-7")}>
