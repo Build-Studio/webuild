@@ -1,4 +1,5 @@
 import NewsItem from "@components/NewsItem";
+import { webInfos } from "@constants";
 import classnames from "tailwindcss-classnames";
 
 const items = [
@@ -58,7 +59,7 @@ export default function BuildCaseStudies() {
             item={item}
             key={index}
             onClick={() => {
-              //
+              window.open(`mailto:${webInfos.email}`);
             }}
             descClasses={classnames("!text-3xl", "font-bold")}
             buttonLabel="LEARN MORE"
