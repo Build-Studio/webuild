@@ -20,13 +20,17 @@ export default function Home() {
           leftBox: {
             title: "WE BUILD GAMES FOR BRANDS",
             desc: [
-              "Build is a globaL technology and creative studio that builds AAA quality, branded metaverse games, experiences and events.",
+              "Build is a global technology and creative studio that builds AAA quality, branded metaverse games, experiences and events.",
               "Our team of more than 40 developers, designers, marketing experts develop, launch and promote gaming and metaverse solutions for brands and agencies across the world.",
             ],
           },
-          videoUrl: "home-banner-video.mp4",
+          videoUrl: "home-banner-video.webm",
         }}
-        gradientTitleClasses={classnames("mr-[130px]")}
+        gradientContainerClasses={classnames(
+          "lg:mr-[130px]",
+          "md:mr-[12vw]",
+          "mr-0"
+        )}
       />
       <HomeBrands />
       <HomeCounter />

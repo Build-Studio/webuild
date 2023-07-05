@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
           )}
         >
           <Header />
-          <div className={classnames(flex("flex-1"), margin("mt-[64px]"))}>
+          <div className={classnames(margin("mt-[64px]"))}>
             {children}
           </div>
           <Footer />

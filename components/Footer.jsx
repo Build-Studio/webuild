@@ -4,7 +4,7 @@ import Image from "next/image";
 import ContactUsForm from "@templates/home/ContactUsForm";
 import HeaderRouters from "./HeaderRoutes";
 import { webInfos } from "@constants";
-
+import { useRouter } from "next/router";
 
 const socials = [
   {
@@ -25,10 +25,21 @@ const socials = [
   },
 ];
 
-export default function Header() {
+export default function Footer() {
+  const router = useRouter();
+
   return (
-    <div>
-      <div className={classnames("bg-gray-800", "text-white", "py-28")}>
+    <>
+      <div
+        className={classnames(
+          "bg-gray-800",
+          "text-white",
+          "py-28",
+          "flex",
+          "items-center",
+          router.pathname === "/contact-us" ? "flex-1" : ""
+        )}
+      >
         <div className={classnames("container", "flex", "justify-between")}>
           <div>
             <h3 className={classnames("font-bold", "mb-4")}>
@@ -138,6 +149,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

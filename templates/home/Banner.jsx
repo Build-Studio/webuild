@@ -4,21 +4,28 @@ import { AiFillCaretRight } from "react-icons/ai";
 import classnames from "tailwindcss-classnames";
 
 export default function HomeBanner(props) {
-  const { data, gradientTitleClasses, subtitleClasses } = props;
+  const { data, gradientContainerClasses, subtitleClasses } = props;
   const router = useRouter();
   const goToContact = () => {
     router.push("/contact-us");
   };
 
+  const gradientClasses = classnames(
+    "font-bold",
+    "leading-none",
+    "lg:text-7xl",
+    "text-[6.5vw]"
+  );
+
   return (
     <div
       className={classnames(
-        "pt-[8vh]",
+        "lg:pt-[8vh] pt-4",
         "bg-[url('/home-banner-bg.png')]",
         "bg-cover",
         "bg-no-repeat",
-        "h-[calc(100vh_-_64px)]",
-        "min-h-[1050px]",
+        "lg:h-[calc(100vh_-_64px)]",
+        "lg:min-h-[1050px]",
         "text-white",
         "flex",
         "flex-col",
@@ -43,24 +50,24 @@ export default function HomeBanner(props) {
             "flex",
             "items-center",
             "justify-center",
-            gradientTitleClasses
+            gradientContainerClasses
           )}
         >
           <div
             className={classnames("px-3", "border-r-[2px]", "border-r-white")}
           >
-            <h1 className={classnames("text-right", "text-7xl", "font-bold")}>
+            <h1 className={classnames("text-right", gradientClasses)}>
               <GradientBlock>{data.gradientTitles[0]}</GradientBlock>
             </h1>
-            <h1 className={classnames("text-right", "text-7xl", "font-bold")}>
+            <h1 className={classnames("text-right", gradientClasses)}>
               <GradientBlock>{data.gradientTitles[1]}</GradientBlock>
             </h1>
           </div>
           <div className={classnames("px-3")}>
-            <h1 className={classnames("text-7xl", "font-bold")}>
+            <h1 className={classnames(gradientClasses)}>
               {data.gradientTitles[2]}
             </h1>
-            <h1 className={classnames("text-7xl", "font-bold")}>
+            <h1 className={classnames(gradientClasses)}>
               {data.gradientTitles[3]}
             </h1>
           </div>
@@ -69,9 +76,11 @@ export default function HomeBanner(props) {
           className={classnames(
             "font-medium",
             "text-center",
-            "mt-10",
+            "lg:mt-10 mt-4",
             "max-w-[600px]",
             "mb-6",
+            "px-2",
+            "lg:text-2xl text-lg",
             subtitleClasses
           )}
           dangerouslySetInnerHTML={{ __html: data.subtitle }}
@@ -89,7 +98,8 @@ export default function HomeBanner(props) {
             "duration-300",
             "text-white",
             "hover:bg-secondary",
-            "text-xl"
+            "text-xl",
+            "mb-4"
           )}
           onClick={goToContact}
         >
@@ -102,6 +112,8 @@ export default function HomeBanner(props) {
           "flex",
           "items-center",
           "container",
+          "lg:flex-nowrap",
+          "flex-wrap",
           "mb-10",
           "relative"
         )}
@@ -112,11 +124,8 @@ export default function HomeBanner(props) {
             "text-white",
             "rounded-xl",
             "p-8",
-            "absolute",
-            "top-[50%]",
-            "left-4",
-            "translate-y-[-50%]",
-            "w-[420px]",
+            "lg:absolute lg:top-[50%] lg:left-4 lg:translate-y-[-50%] lg:w-[420px]",
+            "lg:-order-first order-last",
             "z-10"
           )}
         >
@@ -151,10 +160,11 @@ export default function HomeBanner(props) {
         </div>
         <video
           className={classnames(
-            "w-[1000px]",
-            "max-w-none",
+            "max-w-[1000px]",
+            "w-full",
             "rounded-xl",
-            "ml-auto"
+            "ml-auto",
+            "mb-4"
           )}
           controls
           preload={"auto"}

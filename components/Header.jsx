@@ -35,7 +35,7 @@ export default function Header() {
               className={classnames(
                 "h-12",
                 "w-auto",
-                "mr-6",
+                "lg:mr-6 mr-2",
                 "cursor-pointer",
                 "rounded-md"
               )}
@@ -60,7 +60,7 @@ export default function Header() {
               "hover:text-white",
               "hover:bg-primary"
             )}
-            onClick={() => router.push('/contact-us')}
+            onClick={() => router.push("/contact-us")}
           >
             CONTACT US
             <AiFillCaretRight className={classnames("ml-1")} />
