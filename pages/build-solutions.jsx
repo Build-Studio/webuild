@@ -21,7 +21,7 @@ export default function BuildSolution() {
               "We leverage those learnings to help brands and agencies design and build innovative, custom gaming and metaverse solutions that drive remarkable results.",
             ],
           },
-          videoUrl: "home-banner-video.mp4",
+          videoUrl: "solution-banner-video.mp4",
         }}
         gradientTitleClasses={classnames("ml-[60px]")}
         subtitleClasses={classnames("max-w-[850px]")}
