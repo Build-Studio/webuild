@@ -6,10 +6,9 @@ import { useRouter } from "next/router";
 const items = [
   require("@assets/images/partner-1.png"),
   require("@assets/images/partner-2.png"),
-  require("@assets/images/partner-3.png"),
+  require("@assets/images/partner-3.jpg"),
   require("@assets/images/partner-4.png"),
   require("@assets/images/partner-5.png"),
-  require("@assets/images/partner-6.png"),
 ];
 
 export default function HomePartners() {
@@ -39,10 +38,11 @@ export default function HomePartners() {
               key={index}
               className={classnames(
                 "w-auto",
-                "h-16",
-                "mx-10",
-                "opacity-20",
-                "grayscale-100"
+                "md:h-24 h-16",
+                "md:mx-10 mx-6",
+                "opacity-40",
+                "grayscale-100",
+                "rounded-lg"
               )}
             />
           ))}
