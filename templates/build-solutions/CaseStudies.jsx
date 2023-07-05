@@ -49,11 +49,24 @@ const items = [
 
 export default function BuildCaseStudies() {
   return (
-    <div className={classnames("container", "pb-24")}>
-      <h3 className={classnames("text-center", "font-bold", "mb-4")}>
+    <div className={classnames("container", "md:pb-24 pb-12")}>
+      <h3
+        className={classnames(
+          "text-center",
+          "font-bold",
+          "mb-4",
+          "md:text-3xl text-xl"
+        )}
+      >
         HELPING BRANDS AND AGENCIES NAVIGATE A DYNAMIC NEW MARKET
       </h3>
-      <div className={classnames("grid", "grid-cols-2", "gap-8")}>
+      <div
+        className={classnames(
+          "grid",
+          "md:grid-cols-2 grid-cols-1",
+          "lg:gap-8 gap-4"
+        )}
+      >
         {items.map((item, index) => (
           <NewsItem
             item={item}

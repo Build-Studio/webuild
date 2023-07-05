@@ -98,7 +98,7 @@ export default function HomeBanner(props) {
             "duration-300",
             "text-white",
             "hover:bg-secondary",
-            "text-xl",
+            "md:text-xl text-base",
             "mb-4"
           )}
           onClick={goToContact}
@@ -169,7 +169,7 @@ export default function HomeBanner(props) {
           controls
           preload={"auto"}
         >
-          <source src={data.videoUrl} type="video/mp4" />
+          <source src={data.videoUrl} type="video/webm" />
         </video>
       </div>
     </div>

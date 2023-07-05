@@ -34,13 +34,20 @@ export default function Footer() {
         className={classnames(
           "bg-gray-800",
           "text-white",
-          "py-28",
+          "lg:py-28 py-8",
           "flex",
           "items-center",
           router.pathname === "/contact-us" ? "flex-1" : ""
         )}
       >
-        <div className={classnames("container", "flex", "justify-between")}>
+        <div
+          className={classnames(
+            "container",
+            "flex",
+            "flex-wrap",
+            "justify-between"
+          )}
+        >
           <div>
             <h3 className={classnames("font-bold", "mb-4")}>
               <p className={classnames("leading-none", "-mb-2.5")}>
@@ -48,7 +55,7 @@ export default function Footer() {
               </p>
               <GradientBlock>{webInfos.intro[1]}</GradientBlock>
             </h3>
-            <div className={classnames("mb-8", "w-[300px]")}>
+            <div className={classnames("mb-8", "lg:w-[300px] w-full")}>
               <h5 className={classnames("text-lg", "font-bold", "mb-0.5")}>
                 {webInfos.sgAddress}
               </h5>
@@ -65,7 +72,7 @@ export default function Footer() {
                 {webInfos.email}
               </a>
             </div>
-            <div className={classnames("mb-8", "w-[300px]")}>
+            <div className={classnames("mb-8", "lg:w-[300px] w-full")}>
               <h5 className={classnames("text-lg", "font-bold", "mb-0.5")}>
                 {webInfos.vnAddress}
               </h5>
@@ -122,22 +129,23 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className={classnames("w-[550px]")}>
+          <div className={classnames("lg:w-[550px] w-full", "lg:mt-0 mt-8")}>
             <ContactUsForm />
           </div>
         </div>
       </div>
-      <div className={classnames("bg-gray-900", "text-white", "py-10")}>
+      <div className={classnames("bg-gray-900", "text-white", "md:py-10 py-4")}>
         <div
           className={classnames(
             "container",
             "flex",
+            "md:flex-row flex-col",
             "items-center",
             "justify-between"
           )}
         >
           <HeaderRouters textClasses={classnames("text-white")} />
-          <div className={classnames("flex", "items-center")}>
+          <div className={classnames("flex", "items-center", "md:mt-0 mt-2")}>
             <p className={classnames("font-medium")}>
               2023 Build. All rights reserved
             </p>

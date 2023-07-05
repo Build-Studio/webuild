@@ -18,14 +18,20 @@ const items = [
 
 export default function BuildSolutionLogos() {
   return (
-    <div className={classnames("container", "py-24")}>
+    <div className={classnames("container", "md:py-24 py-16")}>
       <Marquee autoFill pauseOnHover>
         {items.map((item, index) => (
           <Image
             src={item}
             alt="logo"
             key={index}
-            className={classnames("w-auto", "h-20", "mx-6", "opacity-20", 'grayscale-100')}
+            className={classnames(
+              "w-auto",
+              "md:h-20 h-12",
+              "mx-6",
+              "opacity-20",
+              "grayscale-100"
+            )}
           />
         ))}
       </Marquee>

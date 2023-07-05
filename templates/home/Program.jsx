@@ -18,14 +18,27 @@ export default function HomeProgram() {
   };
 
   return (
-    <div className={classnames("container", "mb-24")}>
+    <div className={classnames("container", "md:mb-24 mb-12")}>
       <h3
-        className={classnames("text-center", "text-4xl", "font-bold", "mb-3")}
+        className={classnames(
+          "text-center",
+          "text-4xl",
+          "font-bold",
+          "mb-3",
+          "md:text-3xl text-xl"
+        )}
       >
         BUILD JOINS OFFICIAL ROBLOX PARTNER PROGRAM
       </h3>
 
-      <div className={classnames("flex", "rounded-xl", "overflow-hidden")}>
+      <div
+        className={classnames(
+          "flex",
+          "xl:flex-nowrap flex-wrap",
+          "rounded-xl",
+          "overflow-hidden"
+        )}
+      >
         <div
           className={classnames(
             "flex",
@@ -35,7 +48,11 @@ export default function HomeProgram() {
           )}
         >
           <video
-            className={classnames("w-[760px]", "max-w-none", "aspect-[16/9]")}
+            className={classnames(
+              "xl:w-[760px] xl:max-w-none",
+              "w-full",
+              "aspect-[16/9]"
+            )}
             controls
             preload={"auto"}
           >

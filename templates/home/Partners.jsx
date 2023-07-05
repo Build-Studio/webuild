@@ -20,8 +20,15 @@ export default function HomePartners() {
 
   return (
     <>
-      <div className={classnames("container", "mb-24")}>
-        <h3 className={classnames("text-center", "font-bold", "mb-8")}>
+      <div className={classnames("container", "md:mb-24 mb-12")}>
+        <h3
+          className={classnames(
+            "text-center",
+            "font-bold",
+            "mb-8",
+            "md:text-3xl text-xl"
+          )}
+        >
           OUR PARTNERS
         </h3>
         <Marquee autoFill pauseOnHover>
@@ -30,20 +37,34 @@ export default function HomePartners() {
               src={item}
               alt="logo"
               key={index}
-              className={classnames("w-auto", "h-16", "mx-10", "opacity-20", 'grayscale-100')}
+              className={classnames(
+                "w-auto",
+                "h-16",
+                "mx-10",
+                "opacity-20",
+                "grayscale-100"
+              )}
             />
           ))}
         </Marquee>
       </div>
-      <h3 className={classnames("text-center", "font-bold", "mb-6")}>
+      <h3
+        className={classnames(
+          "text-center",
+          "font-bold",
+          "mb-6",
+          "md:text-3xl text-xl"
+        )}
+      >
         BECOME A BUILDER
       </h3>
       <div
         className={classnames(
           "flex",
+          "lg:flex-row flex-col",
           "items-center",
           "container",
-          "mb-24",
+          "md:mb-24 mb-12",
           "relative"
         )}
       >
@@ -57,16 +78,21 @@ export default function HomePartners() {
             "bg-secondary",
             "text-white",
             "rounded-xl",
-            "p-8",
-            "absolute",
-            "top-[50%]",
-            "right-4",
-            "translate-y-[-50%]",
-            "w-[490px]",
-            "z-10"
+            "md:p-8 p-6",
+            "lg:absolute lg:top-[50%] lg:right-4 lg:translate-y-[-50%]",
+            "lg:w-[490px] w-full",
+            "z-10",
+            "lg:mt-0 mt-4"
           )}
         >
-          <h3 className={classnames("font-bold", "leading-none", "mb-3")}>
+          <h3
+            className={classnames(
+              "font-bold",
+              "leading-none",
+              "mb-3",
+              "md:text-3xl text-xl"
+            )}
+          >
             JOIN US FROM ANYWHERE IN THE WORLD
           </h3>
           <p className={classnames("mb-4")}>

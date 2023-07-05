@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import classnames from "tailwindcss-classnames";
 import { AiFillCaretRight } from "react-icons/ai";
+import { LuMailQuestion } from "react-icons/lu";
 import HeaderRouters from "./HeaderRoutes";
 
 export default function Header() {
@@ -33,9 +34,9 @@ export default function Header() {
               src={require("@assets/images/logo.png")}
               alt="logo"
               className={classnames(
-                "h-12",
+                "md:h-12 h-8",
                 "w-auto",
-                "lg:mr-6 mr-2",
+                "md:mr-6 mr-2",
                 "cursor-pointer",
                 "rounded-md"
               )}
@@ -46,7 +47,7 @@ export default function Header() {
           </div>
           <button
             className={classnames(
-              "flex",
+              "md:flex hidden",
               "items-center",
               "text-primary",
               "font-bold",
@@ -64,6 +65,12 @@ export default function Header() {
           >
             CONTACT US
             <AiFillCaretRight className={classnames("ml-1")} />
+          </button>
+          <button
+            className={classnames("p-1", "text-primary", "md:hidden flex")}
+            onClick={() => router.push("/contact-us")}
+          >
+            <LuMailQuestion size={24} />
           </button>
         </div>
       </div>

@@ -2,11 +2,7 @@ import { SEO_CONFIGS } from "@constants/seo";
 import SEOMeta from "@components/SEOMeta";
 import OGMeta from "@components/OGMeta";
 import Footer from "@components/Footer";
-import classnames, {
-  flex,
-  height,
-  margin,
-} from "tailwindcss-classnames";
+import classnames, { flex, height, margin } from "tailwindcss-classnames";
 import Header from "@components/Header";
 import TwitterMeta from "@components/TwitterMeta";
 
@@ -24,7 +20,7 @@ const Layout = ({ children }) => {
           )}
         >
           <Header />
-          <div className={classnames(margin("mt-[64px]"))}>
+          <div className={classnames(margin("md:mt-[64px] mt-[48px]"))}>
             {children}
           </div>
           <Footer />

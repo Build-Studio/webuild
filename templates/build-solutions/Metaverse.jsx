@@ -27,21 +27,28 @@ const items = [
 
 export default function BuildMetaVerse() {
   return (
-    <div className={classnames("container", "pb-24")}>
-      <div className={classnames("mb-12")}>
+    <div className={classnames("container", "md:pb-24 pb-12")}>
+      <div className={classnames("md:mb-12 mb-6")}>
         <h3
           className={classnames(
             "text-center",
             "font-bold",
             "mb-3",
             "mx-auto",
-            "leading-none"
+            "md:leading-none",
+            "md:text-3xl text-xl"
           )}
         >
           HOW WE BRING YOUR BRAND INTO THE METAVERSE
         </h3>
       </div>
-      <div className={classnames("grid", "grid-cols-2", "gap-8")}>
+      <div
+        className={classnames(
+          "grid",
+          "md:grid-cols-2 grid-cols-1",
+          "lg:gap-8 gap-6"
+        )}
+      >
         {items.map((item, index) => (
           <div
             key={index}
@@ -51,8 +58,8 @@ export default function BuildMetaVerse() {
               "rounded-lg",
               "flex",
               "flex-col",
-              "items-center",
-              "py-8"
+              "md:items-center",
+              "md:p-8 p-6"
             )}
           >
             <div>
@@ -62,7 +69,7 @@ export default function BuildMetaVerse() {
                   className={classnames(
                     "font-bold",
                     "text-white",
-                    "text-3xl",
+                    "lg:text-3xl text-xl",
                     "leading-normal"
                   )}
                 >

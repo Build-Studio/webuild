@@ -63,7 +63,15 @@ export default function ContactUsForm() {
 
   return (
     <div>
-      <h3 className={classnames("mb-14", "font-bold")}>CONTACT US</h3>
+      <h3
+        className={classnames(
+          "lg:mb-14 mb-4",
+          "font-bold",
+          "md:text-3xl text-xl"
+        )}
+      >
+        CONTACT US
+      </h3>
       <div>
         <form onSubmit={onSubmit}>
           <div
@@ -78,7 +86,11 @@ export default function ContactUsForm() {
             {inputs.map((item) => (
               <div
                 key={item.value}
-                className={item.type === "textarea" ? "col-span-2" : ""}
+                className={
+                  item.type === "textarea"
+                    ? "col-span-2"
+                    : "md:col-span-1 col-span-2"
+                }
               >
                 {item.type === "textarea" ? (
                   <textarea

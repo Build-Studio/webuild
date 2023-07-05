@@ -32,6 +32,7 @@ export default function HeaderRouters({ textClasses, hideContact }) {
               "transition",
               "duration-300",
               "hover:text-primary",
+              "md:text-base text-xs",
               textClasses
             )}
           >

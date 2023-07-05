@@ -1,5 +1,4 @@
 import NewsItem from "@components/NewsItem";
-import { webInfos } from "@constants";
 import { useRouter } from "next/router";
 import { AiFillCaretRight } from "react-icons/ai";
 import { BiVideoRecording } from "react-icons/bi";
@@ -8,8 +7,8 @@ import classnames from "tailwindcss-classnames";
 const items = [
   {
     label: "MOST POPULAR",
-    desc: "NCT 127",
-    img: require("@assets/images/story-img-1.webp"),
+    desc: "HEROES & EMPIRES",
+    img: require("@assets/images/story-img-1.jpeg"),
     icon: require("@assets/images/story-icon-1.svg"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
@@ -17,7 +16,7 @@ const items = [
   },
   {
     label: "AWARD WINNING",
-    desc: "NICKELODEON",
+    desc: "MARVEL SNAP",
     img: require("@assets/images/story-img-2.jpeg"),
     icon: require("@assets/images/story-icon-2.svg"),
     textColor: "text-primary",
@@ -26,8 +25,8 @@ const items = [
   },
   {
     label: "25M+ KICKERS ITEMS WORN",
-    desc: "KICKERS",
-    img: require("@assets/images/story-img-3.webp"),
+    desc: "METADOS",
+    img: require("@assets/images/story-img-3.jpeg"),
     icon: require("@assets/images/story-icon-3.svg"),
     textColor: "text-blue",
     bgColor: "bg-blue",
@@ -36,8 +35,8 @@ const items = [
   },
   {
     label: "MTV MUSIC  VIDEO AWARD NOMINATION",
-    desc: "CHARLIE XCX",
-    img: require("@assets/images/story-img-4.webp"),
+    desc: "FORTNITE",
+    img: require("@assets/images/story-img-4.jpeg"),
     icon: require("@assets/images/story-icon-4.svg"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",
@@ -52,11 +51,24 @@ export default function HomeStories() {
     router.push("/build-solutions");
   };
   return (
-    <div className={classnames("container", "pb-24")}>
-      <h3 className={classnames("text-center", "font-bold", "mb-4")}>
+    <div className={classnames("container", "md:pb-24 pb-12")}>
+      <h3
+        className={classnames(
+          "text-center",
+          "font-bold",
+          "mb-4",
+          "md:text-3xl text-xl"
+        )}
+      >
         SUCCESS STORIES
       </h3>
-      <div className={classnames("grid", "grid-cols-2", "gap-8")}>
+      <div
+        className={classnames(
+          "grid",
+          "md:grid-cols-2 grid-cols-1",
+          "lg:gap-8 gap-4"
+        )}
+      >
         {items.map((item, index) => (
           <NewsItem
             item={item}
@@ -88,7 +100,7 @@ export default function HomeStories() {
             "duration-300",
             "text-white",
             "hover:bg-secondary",
-            "text-xl"
+            "md:text-xl text-sm"
           )}
           onClick={goToBuildSolutions}
         >

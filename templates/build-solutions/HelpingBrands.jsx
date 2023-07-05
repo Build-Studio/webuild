@@ -36,8 +36,8 @@ const items = [
 
 export default function BuildHelpingBrands() {
   return (
-    <div className={classnames("container", "pt-24")}>
-      <div className={classnames("mb-12")}>
+    <div className={classnames("container", "md:pt-24 mt-12")}>
+      <div className={classnames("md:mb-12 mb-6")}>
         <h3
           className={classnames(
             "text-center",
@@ -45,7 +45,8 @@ export default function BuildHelpingBrands() {
             "mb-3",
             "max-w-[450px]",
             "mx-auto",
-            "leading-none"
+            "md:leading-none",
+            "md:text-3xl text-xl"
           )}
         >
           HELPING BRANDS ACCESS THE HOTTEST PROPERTIES
@@ -55,7 +56,13 @@ export default function BuildHelpingBrands() {
           right concept and the right tech for your needs and budget
         </p>
       </div>
-      <div className={classnames("grid", "grid-cols-2", "gap-8")}>
+      <div
+        className={classnames(
+          "grid",
+          "md:grid-cols-2 grid-cols-1",
+          "lg:gap-8 gap-4"
+        )}
+      >
         {items.map((item, index) => (
           <NewsItem
             item={item}

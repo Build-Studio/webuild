@@ -38,7 +38,14 @@ export default function NewsItem(props) {
         className={classnames("h-[350px]", "w-full", "object-cover")}
       />
       <div
-        className={classnames("flex", "items-center", "justify-between", "p-4")}
+        className={classnames(
+          "flex-1",
+          "flex",
+          "lg:flex-row flex-col",
+          "lg:items-center items-start",
+          "justify-between",
+          "p-4"
+        )}
       >
         <p
           className={classnames(
@@ -56,6 +63,7 @@ export default function NewsItem(props) {
           className={classnames(
             "flex",
             "items-center",
+            "justify-center",
             "bg-white",
             "font-bold",
             "py-3",
@@ -65,8 +73,10 @@ export default function NewsItem(props) {
             "duration-300",
             item.textColor,
             "hover:opacity-80",
-            "text-xl",
-            "font-bold"
+            "lg:text-xl",
+            "font-bold",
+            "lg:w-auto w-full",
+            "lg:mt-0 mt-2"
           )}
         >
           {buttonLabel}

@@ -42,9 +42,15 @@ const items = [
 
 export default function HomeGameTypes() {
   return (
-    <div className={classnames("container", "mb-24")}>
+    <div className={classnames("container", "md:mb-24 mb-12")}>
       <h3
-        className={classnames("text-center", "text-4xl", "font-bold", "mb-3")}
+        className={classnames(
+          "text-center",
+          "text-4xl",
+          "font-bold",
+          "mb-3",
+          "md:text-3xl text-xl"
+        )}
       >
         OUR GAMES TYPES
       </h3>
@@ -62,7 +68,13 @@ export default function HomeGameTypes() {
         deeply engage with their customers
       </h6>
 
-      <div className={classnames("grid", "grid-cols-6", "gap-3")}>
+      <div
+        className={classnames(
+          "grid",
+          "lg:grid-cols-6 md:grid-cols-3 grid-cols-2",
+          "gap-3"
+        )}
+      >
         {items.map((item, index) => (
           <div
             key={index}

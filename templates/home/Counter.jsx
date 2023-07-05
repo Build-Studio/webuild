@@ -24,8 +24,10 @@ const items = [
 
 export default function HomeCounter() {
   return (
-    <div className={classnames("container", "pb-24")}>
-      <div className={classnames("grid", "grid-cols-3", "gap-8")}>
+    <div className={classnames("container", "md:pb-24 pb-12")}>
+      <div
+        className={classnames("grid", "lg:grid-cols-3 grid-cols-1", "gap-8")}
+      >
         {items.map((item) => (
           <div
             key={item.label}
