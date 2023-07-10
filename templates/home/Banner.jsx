@@ -167,6 +167,9 @@ export default function HomeBanner(props) {
             "mb-4"
           )}
           controls
+          autoPlay
+          muted
+          loop
           preload={"auto"}
         >
           <source src={data.videoUrl} type="video/webm" />

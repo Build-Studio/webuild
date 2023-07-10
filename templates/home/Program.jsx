@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useEffect, useRef } from "react";
 import classnames from "tailwindcss-classnames";
 
 const info = {
@@ -13,12 +14,34 @@ const info = {
 
 export default function HomeProgram() {
   const router = useRouter();
+  const containerRef = useRef(null);
+  const vidRef = useRef(null);
+
   const goToContact = () => {
     router.push("/contact-us");
   };
 
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const { offsetTop } = containerRef.current || {};
+    const condition = offsetTop - (window.innerHeight - 100);
+    if (window.scrollY >= condition) {
+      vidRef.current?.play?.();
+    }
+  };
+
   return (
-    <div className={classnames("container", "md:mb-24 mb-12")}>
+    <div
+      className={classnames("container", "md:mb-24 mb-12")}
+      ref={containerRef}
+    >
       <h3
         className={classnames(
           "text-center",
@@ -48,12 +71,15 @@ export default function HomeProgram() {
           )}
         >
           <video
+            ref={vidRef}
             className={classnames(
               "xl:w-[760px] xl:max-w-none",
               "w-full",
               "aspect-[16/9]"
             )}
             controls
+            muted
+            loop
             preload={"auto"}
           >
             <source src={"home-program-video.mp4"} type="video/mp4" />
