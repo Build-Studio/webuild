@@ -24,7 +24,7 @@ export default function BuildSolution() {
           videoUrl: "solution-banner-video.webm",
         }}
         gradientContainerClasses={classnames("lg:ml-[60px] ml-6")}
-        subtitleClasses={classnames("max-w-[850px]")}
+        subtitleClasses={classnames("max-w-[900px]")}
       />
       <BuildHelpingBrands />
       <BuildSolutionLogos />

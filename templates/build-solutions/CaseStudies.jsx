@@ -1,5 +1,6 @@
 import NewsItem from "@components/NewsItem";
 import { webInfos } from "@constants";
+import { useRouter } from "next/router";
 import classnames from "tailwindcss-classnames";
 
 const items = [
@@ -48,6 +49,8 @@ const items = [
 ];
 
 export default function BuildCaseStudies() {
+  const router = useRouter();
+
   return (
     <div className={classnames("container", "md:pb-24 pb-12")}>
       <h3
@@ -71,9 +74,7 @@ export default function BuildCaseStudies() {
           <NewsItem
             item={item}
             key={index}
-            onClick={() => {
-              window.open(`mailto:${webInfos.email}`);
-            }}
+            onClick={() => router.push("/contact-us")}
             descClasses={classnames("!text-3xl", "font-bold")}
             buttonLabel="LEARN MORE"
           />

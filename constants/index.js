@@ -5,5 +5,5 @@ export const webInfos = {
     "4th Floor, 343 Hoang Sa, Tan Dinh Ward, District 1, Ho Chi Minh City, Vietnam 700000",
   email: "team@webuild.gg",
   phone: "+84 896 656941",
-  contactEmails: ['matt@webuild.gg', 'team@webuild.gg']
+  contactEmails: ['matt@webuild.gg', 'team@webuild.gg', 'contact@webuild.gg']
 };

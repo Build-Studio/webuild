@@ -47,8 +47,8 @@ const items = [
 
 export default function HomeStories() {
   const router = useRouter();
-  const goToBuildSolutions = () => {
-    router.push("/build-solutions");
+  const goToContact = () => {
+    router.push("/contact-us");
   };
   return (
     <div className={classnames("container", "md:pb-24 pb-12")}>
@@ -102,7 +102,7 @@ export default function HomeStories() {
             "hover:bg-secondary",
             "md:text-xl text-sm"
           )}
-          onClick={goToBuildSolutions}
+          onClick={goToContact}
         >
           LEARN MORE ABOUT OUR WORK
           <AiFillCaretRight className={classnames("ml-1")} />

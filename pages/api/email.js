@@ -8,8 +8,8 @@ export default async (req, res) => {
   try {
     const data = await resend.emails.send({
       from: "noreply@webuild.gg",
-      // to: webInfos.contactEmails,
-      to: ['kemmie.xd@gmail.com'],
+      to: webInfos.contactEmails,
+      // to: ['kemmie.xd@gmail.com'],
       subject: "Contact from We Build",
       react: EmailTemplate(JSON.parse(req?.body)),
     });

@@ -13,8 +13,8 @@ const items = [
 
 export default function HomePartners() {
   const router = useRouter();
-  const goToBuildSolution = () => {
-    router.push("/build-solutions");
+  const goToContact = () => {
+    router.push("/contact-us");
   };
 
   return (
@@ -116,7 +116,7 @@ export default function HomePartners() {
               "text-secondary",
               "hover:opacity-80"
             )}
-            onClick={goToBuildSolution}
+            onClick={goToContact}
           >
             LEARN MORE
           </button>

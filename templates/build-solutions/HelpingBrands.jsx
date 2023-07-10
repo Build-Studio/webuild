@@ -1,6 +1,7 @@
 import NewsItem from "@components/NewsItem";
 import { webInfos } from "@constants";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import classnames from "tailwindcss-classnames";
 
 const items = [
@@ -35,6 +36,8 @@ const items = [
 ];
 
 export default function BuildHelpingBrands() {
+  const router = useRouter();
+
   return (
     <div className={classnames("container", "md:pt-24 mt-12")}>
       <div className={classnames("md:mb-12 mb-6")}>
@@ -67,9 +70,7 @@ export default function BuildHelpingBrands() {
           <NewsItem
             item={item}
             key={index}
-            onClick={() => {
-              window.open(`mailto:${webInfos.email}`);
-            }}
+            onClick={() => router.push("/contact-us")}
             buttonLabel="LEARN MORE"
             buttonIcon
           />

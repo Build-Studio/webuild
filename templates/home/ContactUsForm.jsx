@@ -3,9 +3,9 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 const inputs = [
-  { value: "name", label: "FULL NAME" },
+  { value: "name", label: "FULL NAME", required: true },
   { value: "companyName", label: "COMPANY NAME" },
-  { value: "email", label: "EMAIL ADDRESS", type: "email" },
+  { value: "email", label: "EMAIL ADDRESS", type: "email", required: true },
   { value: "phone", label: "PHONE NUMBER" },
   { value: "message", label: "YOUR MESSAGE...", type: "textarea" },
 ];
@@ -94,7 +94,7 @@ export default function ContactUsForm() {
               >
                 {item.type === "textarea" ? (
                   <textarea
-                    required
+                    required={item.required || false}
                     placeholder={item.label}
                     className={classnames(
                       "px-2",
@@ -116,7 +116,7 @@ export default function ContactUsForm() {
                   />
                 ) : (
                   <input
-                    required
+                    required={item.required || false}
                     placeholder={item.label}
                     className={classnames(
                       "px-2",
