@@ -64,8 +64,8 @@ export default function HomeGameTypes() {
           "mb-4"
         )}
       >
-        We build all types of games and environments for brands wanting to
-        deeply engage with their customers
+        We build all types of custom games and environments. Build deep customer
+        engagement through immersive experiences.
       </h6>
 
       <div

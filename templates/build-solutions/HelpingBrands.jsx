@@ -7,28 +7,28 @@ import classnames from "tailwindcss-classnames";
 const items = [
   {
     label: "AAA QUALITY",
-    desc: "We work with brands and agencies to ideate, design, build and promote destination games and events as part of integrated marketing campaigns.",
+    desc: "Access AAA quality games and elevate your brand through custom integrations in popular titles like Fortnite and Minecraft.",
     img: require("@assets/images/helping-brand-img-1.jpeg"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
   },
   {
-    label: "UGC Metaverse",
-    desc: "Be build pop-up mini experiences inside popular games",
+    label: "UGC METAVERSE",
+    desc: "Unleash your brand's creative spirit by developing games, events, and immersive experiences on platforms such as Roblox and The Sandbox.",
     img: require("@assets/images/helping-brand-img-2.png"),
     textColor: "text-primary",
     bgColor: "bg-primary",
   },
   {
-    label: "In-App Games",
-    desc: "Any platforms, any intergaration, whatever, we can do it...(and help yuo find the right solution for your need)",
+    label: "IN-APP GAMES",
+    desc: "Explore a vast range of customer interaction and sales opportunities by developing bespoke games within your existing brand app.",
     img: require("@assets/images/helping-brand-img-3.jpeg"),
     textColor: "text-blue",
     bgColor: "bg-blue",
   },
   {
-    label: "Mobile Games",
-    desc: "Custom maps, characters, player abilities, and branded events promoted to millions of players ",
+    label: "MOBILE GAMES",
+    desc: "Build stand-alone mobile games to increase brand awareness, deepen engagement, drive customer loyalty and promote products.",
     img: require("@assets/images/helping-brand-img-4.jpeg"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",
@@ -54,9 +54,16 @@ export default function BuildHelpingBrands() {
         >
           HELPING BRANDS ACCESS THE HOTTEST PROPERTIES
         </h3>
-        <p className={classnames("text-center", "font-medium")}>
-          We will help bring your brand or idea into the metaverse, with the
-          right concept and the right tech for your needs and budget
+        <p
+          className={classnames(
+            "text-center",
+            "font-medium",
+            "max-w-[500px]",
+            "mx-auto"
+          )}
+        >
+          Unlock the power of the metaverse with our specialized expertise in
+          designing, developing and promoting custom branded solutions.
         </p>
       </div>
       <div

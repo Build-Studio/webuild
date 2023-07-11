@@ -2,14 +2,21 @@ import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import classnames from "tailwindcss-classnames";
 
+
+
+
+
+
+
+
 const info = {
   title: "WE'RE AN OFFICIAL ROBLOX PROGRAM",
   desc1:
-    "Built are excited to announce our partnership with the Roblox. As a trusted Roblox Partner, we'll revolutionize immersive advertising and deliver transformative digital experiences for gamers.",
+  "We're thrilled to share the exciting news of our partnership with Roblox! As a trusted Roblox Partner, Build is set to revolutionize immersive advertising and deliver transformative digital experiences to gamers.",
   desc2:
-    "With our expertise and deep understanding of the platform, we help brands establish a successful presence and effectively connect with their target audience. Get in touch and find out how you can help Bulild in reshaping brand engagement on Roblox and other market leading metaverse and gaming platforms.",
+    "Leveraging our expertise and profound understanding of the platform, we specialize in helping brands establish a powerful presence and effectively connect with their target audience.",
   desc3:
-    "Join us as we redefine immersive experiences and unlock a new world of marketing solutions for brands.",
+    "Reach out to us today to discover how you can join Build in reshaping brand engagement on Roblox, as well as other leading metaverse and gaming platforms."
 };
 
 export default function HomeProgram() {

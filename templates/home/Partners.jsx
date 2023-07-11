@@ -11,6 +11,9 @@ const items = [
   require("@assets/images/partner-5.png"),
 ];
 
+const desc =
+  "Calling all expert builders! Are you skilled in Roblox Studio? Have you crafted premium games with Unity Engine? Mastered Unreal Engine or Fortnite? Maybe you excel in MineCraft or The Sandbox? If you have a proven track record of building awesome games and experiences, get in touch now!";
+
 export default function HomePartners() {
   const router = useRouter();
   const goToContact = () => {
@@ -95,13 +98,7 @@ export default function HomePartners() {
           >
             JOIN US FROM ANYWHERE IN THE WORLD
           </h3>
-          <p className={classnames("mb-4")}>
-            Are you an expert builder. Do you know how to bulid in Roblox
-            Studio? Have you developed premium games with Unity Engine. Have you
-            got deep experience with Unreal Engine or Fortnite? How about
-            MineCraft or The Sandbox. If you have a proven track record of
-            awesome building, get in touch.
-          </p>
+          <p className={classnames("mb-4")}>{desc}</p>
           <button
             className={classnames(
               "flex",

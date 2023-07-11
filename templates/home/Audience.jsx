@@ -7,28 +7,28 @@ import classnames from "tailwindcss-classnames";
 const items = [
   {
     label: "ROBLOX GAMES AND EVENTS",
-    desc: "We work with brands and agencies to ideate, design, build and promote destination games and events as part of integrated marketing campaigns.",
+    desc: "We help brands and agnecies design and build their own destination games, virtual experiences, events, branded items, and merchandise within the Roblox platform.",
     img: require("@assets/images/audience-img-1.jpeg"),
     textColor: "text-secondary",
     bgColor: "bg-secondary",
   },
   {
     label: "MINECRAFT CUSTOM SOLUTIONS",
-    desc: "Be build pop-up mini experiences inside popular games",
+    desc: "We specialize in building one-of-a-kind, branded Minecraft in-game experiences, creating immersive elements and merchandise to promote brands and foster deep customer engagement.",
     img: require("@assets/images/audience-img-2.webp"),
     textColor: "text-primary",
     bgColor: "bg-primary",
   },
   {
     label: "STRATEGIC BRAND SOLUTIONS",
-    desc: "Any platforms, any intergaration, whatever, we can do it...(and help yuo find the right solution for your need)",
+    desc: "Any platforms, any intergaration, whatever the gaming experience or metaverse event your brand needs, we can build it!",
     img: require("@assets/images/audience-img-3.webp"),
     textColor: "text-blue",
     bgColor: "bg-blue",
   },
   {
     label: "FORTNITE CUSTOM CREATIVE",
-    desc: "Custom maps, characters, player abilities, and branded events promoted to millions of players ",
+    desc: "Help your brand stand out with custom maps, characters, player abilities, and branded events promoted to millions of players on Fortnite.",
     img: require("@assets/images/audience-img-4.webp"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",

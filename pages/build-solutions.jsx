@@ -13,12 +13,12 @@ export default function BuildSolution() {
         data={{
           gradientTitles: ["WHAT", "WE BUILD", "OUR", "SOLUTIONS"],
           subtitle:
-            "We help global brands and agencies design, build and promote innovative gaming and metaverse environments that drive measureable business results",
+            "Empowering global brands and agencies, we specialize in designing, building, and promoting innovative gaming and metaverse solutions that deliver tangible business outcomes.",
           leftBox: {
             title: "WE'RE ALL ABOUT SOLUTIONS THAT DRIVE RESULTS",
             desc: [
-              "Build's team of researchers and strategists help brands understand a new and rapidly evolving market.",
-              "We leverage those learnings to help brands and agencies design and build innovative, custom gaming and metaverse solutions that drive remarkable results.",
+              "With Build's team of skilled researchers and strategists, we provide invaluable insights into a dynamic and ever-changing gaming and metaverse landscape.",
+              "Leveraging our expertise, we collaborate with brands and agencies to craft exceptional, tailor-made branded solutions that yield remarkable results.",
             ],
           },
           videoUrl: "solution-banner-video.webm",

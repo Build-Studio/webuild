@@ -48,13 +48,7 @@ export default function NewsItem(props) {
         )}
       >
         <p
-          className={classnames(
-            "flex-1",
-            "mr-3",
-            "leading-[1.2]",
-            "text-sm",
-            descClasses
-          )}
+          className={classnames("flex-1", "mr-3", "leading-[1.2]", descClasses)}
         >
           {item.desc}
         </p>
