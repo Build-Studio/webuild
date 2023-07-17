@@ -73,7 +73,7 @@ export default function HomePartners() {
       >
         <Image
           alt="img"
-          src={require("@assets/images/become-a-builder-img.webp")}
+          src={require("@assets/images/become-a-builder-img.png")}
           className={classnames("w-[1000px]", "aspect-[16/9]", "rounded-xl")}
         />
         <div

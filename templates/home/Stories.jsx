@@ -26,7 +26,7 @@ const items = [
   {
     label: "25M+ KICKERS ITEMS WORN",
     desc: "METADOS",
-    img: require("@assets/images/story-img-3.jpeg"),
+    img: require("@assets/images/story-img-3.jpg"),
     icon: require("@assets/images/story-icon-3.svg"),
     textColor: "text-blue",
     bgColor: "bg-blue",
@@ -36,7 +36,7 @@ const items = [
   {
     label: "MTV MUSIC  VIDEO AWARD NOMINATION",
     desc: "FORTNITE",
-    img: require("@assets/images/story-img-4.jpeg"),
+    img: require("@assets/images/story-img-4.webp"),
     icon: require("@assets/images/story-icon-4.svg"),
     textColor: "text-fuchsia",
     bgColor: "bg-fuchsia",
