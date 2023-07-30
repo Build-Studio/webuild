@@ -24,7 +24,7 @@ const items = [
     videoUrl: "https://www.youtube.com/watch?v=_jQt36lq0ew",
   },
   {
-    label: "25M+ KICKERS ITEMS WORN",
+    label: "AAA ROLE PLAYER GAMES",
     desc: "METADOS",
     img: require("@assets/images/story-img-3.jpg"),
     icon: require("@assets/images/story-icon-3.svg"),
@@ -34,7 +34,7 @@ const items = [
       "https://www.youtube.com/watch?v=Dkvw6VtC0wQ&pp=ygUHbWV0YWRvcw%3D%3D",
   },
   {
-    label: "MTV MUSIC  VIDEO AWARD NOMINATION",
+    label: "INTERACTIVE FORTNITE EXPERIENCES",
     desc: "FORTNITE",
     img: require("@assets/images/story-img-4.webp"),
     icon: require("@assets/images/story-icon-4.svg"),
