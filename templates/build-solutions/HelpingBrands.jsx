@@ -14,7 +14,7 @@ const items = [
   },
   {
     label: "UGC METAVERSE",
-    desc: "Unleash your brand's creative spirit by developing games, events, and immersive experiences on platforms such as Roblox and The Sandbox.",
+    desc: "Unleash your brand's creative spirit by developing games, events, and immersive experiences on platforms such as The Sandbox.",
     img: require("@assets/images/helping-brand-img-2.png"),
     textColor: "text-primary",
     bgColor: "bg-primary",

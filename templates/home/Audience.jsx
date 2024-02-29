@@ -6,13 +6,6 @@ import classnames from "tailwindcss-classnames";
 
 const items = [
   {
-    label: "ROBLOX GAMES AND EVENTS",
-    desc: "We help brands and agnecies design and build their own destination games, virtual experiences, events, branded items, and merchandise within the Roblox platform.",
-    img: require("@assets/images/audience-img-1.jpeg"),
-    textColor: "text-secondary",
-    bgColor: "bg-secondary",
-  },
-  {
     label: "MINECRAFT CUSTOM SOLUTIONS",
     desc: "We specialize in building one-of-a-kind, branded Minecraft in-game experiences, creating immersive elements and merchandise to promote brands and foster deep customer engagement.",
     img: require("@assets/images/audience-img-2.webp"),
@@ -52,7 +45,7 @@ export default function HomeAudience() {
         </h3>
         <p className={classnames("text-center", "font-medium")}>
           We work with brands and agencies to create amazing experiences in
-          games like Roblox, Fortnite and Minecraft
+          games like Fortnite and Minecraft
         </p>
       </div>
       <div

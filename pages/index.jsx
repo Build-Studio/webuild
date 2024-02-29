@@ -35,7 +35,7 @@ export default function Home() {
       <HomeBrands />
       <HomeCounter />
       <HomeAudience />
-      <HomeProgram />
+      {/* <HomeProgram /> */}
       <HomeGameTypes />
       <HomeStories />
       <HomePartners />

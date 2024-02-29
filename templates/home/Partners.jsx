@@ -12,7 +12,7 @@ const items = [
 ];
 
 const desc =
-  "Calling all expert builders! Are you skilled in Roblox Studio? Have you crafted premium games with Unity Engine? Mastered Unreal Engine or Fortnite? Maybe you excel in MineCraft or The Sandbox? If you have a proven track record of building awesome games and experiences, get in touch now!";
+  "Have you crafted premium games with Unity Engine? Mastered Unreal Engine or Fortnite? Maybe you excel in MineCraft or The Sandbox? If you have a proven track record of building awesome games and experiences, get in touch now!";
 
 export default function HomePartners() {
   const router = useRouter();

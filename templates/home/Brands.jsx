@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const items = [
   require("@assets/images/brand-6.svg"),
   require("@assets/images/brand-7.png"),
-  require("@assets/images/brand-5.png"),
+  // require("@assets/images/brand-5.png"),
   require("@assets/images/brand-8.png"),
   require("@assets/images/brand-10.png"),
   require("@assets/images/brand-4.png"),

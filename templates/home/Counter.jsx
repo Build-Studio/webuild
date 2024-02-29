@@ -11,7 +11,7 @@ const items = [
   {
     icon: require("@assets/images/counter-icon-2.png"),
     label: "100's of GAMES",
-    desc: "We've built 100's of games on Roblox, Fortnite, Minecraft and many other platforms.",
+    desc: "We've built 100's of games on Fortnite, Minecraft and many other platforms.",
     bg: "bg-secondary",
   },
   {
